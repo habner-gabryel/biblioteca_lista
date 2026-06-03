@@ -30,4 +30,6 @@
 
 #include "Operacoes/11_disjuncaoListas.h"
 
+#include "Operacoes/12_contidaListas.h"
+
 #endif

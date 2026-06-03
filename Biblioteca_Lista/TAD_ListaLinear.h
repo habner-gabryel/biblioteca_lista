@@ -47,9 +47,9 @@ pDLista  unirListas   (pDLista, pDLista, FuncaoComparacao);
 
 pDLista  interseccaoListas (pDLista, pDLista, FuncaoComparacao);
 
-int      disjuncaoListas (pDLista, pDLista, FuncaoComparacao);
+int      disjuncaoListas(pDLista, pDLista, FuncaoComparacao);
 
-
+int      contida (pDLista, pDLista, FuncaoComparacao);
 
 
 
