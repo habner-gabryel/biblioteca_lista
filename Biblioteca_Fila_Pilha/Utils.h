@@ -103,5 +103,44 @@ int balanceamento (char expressao[], int tamanho) {
    }
    return pilhaVazia(pilha); // Retorna 1 se equilibrada, 0 caso contrário
 }
+/* ---------------------------------------- */
+int avaliaExpressaoAritmetica(char expressao[]) {
+   pDPilha pilha = criarPilha();
+   for (int i = 0; i < strlen(expressao); i++) {
+
+      char caracter = expressao[i];
+      
+      if (caracter >= '0' && caracter <= '9') {
+         empilharInfo(pilha, (void*)(intptr_t)(caracter - '0'));
+      } else if (caracter == '+' || caracter == '-' || caracter == '*' || caracter == '/') {
+         if (pilhaVazia(pilha)) {
+            return 0; // Expressão inválida
+         }
+         int b = (int)(intptr_t)desempilharInfo(pilha);
+         if (pilhaVazia(pilha)) {
+            return 0; // Expressão inválida
+         }
+         int a = (int)(intptr_t)desempilharInfo(pilha);
+         int resultado;
+         switch (caracter) {
+            case '+': resultado = a + b; break;
+            case '-': resultado = a - b; break;
+            case '*': resultado = a * b; break;
+            case '/': 
+               if (b == 0) {
+                  return 0; // Divisão por zero
+               }
+               resultado = a / b; 
+               break;
+         }
+         empilharInfo(pilha, (void*)(intptr_t)resultado);
+      }
+   }
+   if (pilhaVazia(pilha)) {
+      return 0; // Expressão inválida
+   }
+   int resultadoFinal = (int)(intptr_t)desempilharInfo(pilha);
+   return pilhaVazia(pilha) ? resultadoFinal : 0; // Retorna o resultado se válido, caso contrário 0
+}
 
 #endif /* UTILS_H */
