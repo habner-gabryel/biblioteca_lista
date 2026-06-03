@@ -15,4 +15,6 @@
 
 #include "OperacoesFila/4_filaVazia.h"
 
+#include "OperacoesFila/5_inverterFila.h"
+
 #endif // FILA_H
