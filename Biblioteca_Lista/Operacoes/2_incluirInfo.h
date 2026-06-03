@@ -71,8 +71,9 @@ void incluirInfoOrdenada(pDLista pd, void* info, FuncaoComparacao funcaoComparac
    if(pd->inicio == NULL || funcaoComparacao(info, pd->inicio->info) < 0){
       novoNoh->prox = pd->inicio;
       pd->inicio = novoNoh;
-      if(pd->fim == NULL)
+      if(pd->fim == NULL) {
          pd->fim = novoNoh;
+      }
    } else {
       pNoh aux = pd->inicio;
 
