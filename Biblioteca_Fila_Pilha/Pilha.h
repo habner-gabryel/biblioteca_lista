@@ -21,4 +21,6 @@
 
 #include "OperacoesPilha/7_removeInfo.h"
 
+#include "OperacoesPilha/8_interseccaoPilhas.h"
+
 #endif

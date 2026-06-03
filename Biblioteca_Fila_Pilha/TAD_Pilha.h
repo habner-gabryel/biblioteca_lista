@@ -13,13 +13,14 @@ typedef void* (*FuncaoAlocacao)  (void *);
 /*------------------------------------------*/
 /* operacoes                                */
 /*------------------------------------------*/
-pDPilha  criarPilha     ();
-void     empilharInfo   (pDPilha, void *);
-void*    desempilharInfo(pDPilha);
-int      pilhaVazia     (pDPilha);
-int      pilhasIguais   (pDPilha, pDPilha, FuncaoComparacao);
-pDPilha  copiaPilha     (pDPilha, FuncaoAlocacao);
-int      removeInfo     (pDPilha, void *, FuncaoComparacao);
+pDPilha  criarPilha         ();
+void     empilharInfo       (pDPilha, void *);
+void*    desempilharInfo    (pDPilha);
+int      pilhaVazia         (pDPilha);
+int      pilhasIguais       (pDPilha, pDPilha, FuncaoComparacao);
+pDPilha  copiaPilha         (pDPilha, FuncaoAlocacao);
+int      removeInfo         (pDPilha, void *, FuncaoComparacao);
+pDPilha  interseccaoPilhas  (pDPilha, pDPilha, FuncaoComparacao);
 
 #endif
 
