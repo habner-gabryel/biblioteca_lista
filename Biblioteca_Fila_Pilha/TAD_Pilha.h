@@ -9,6 +9,7 @@ typedef DPilha*        pDPilha;
 
 typedef int   (*FuncaoComparacao)(void *, void *);
 typedef void* (*FuncaoAlocacao)  (void *);
+typedef void  (*FuncaoLiberacao) (void *);
 
 /*------------------------------------------*/
 /* operacoes                                */
@@ -21,6 +22,7 @@ int      pilhasIguais       (pDPilha, pDPilha, FuncaoComparacao);
 pDPilha  copiaPilha         (pDPilha, FuncaoAlocacao);
 int      removeInfo         (pDPilha, void *, FuncaoComparacao);
 pDPilha  interseccaoPilhas  (pDPilha, pDPilha, FuncaoComparacao);
+void     limparPilha        (pDPilha, FuncaoLiberacao);
 
 #endif
 

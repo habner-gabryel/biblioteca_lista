@@ -23,4 +23,6 @@
 
 #include "OperacoesPilha/8_interseccaoPilhas.h"
 
+#include "OperacoesPilha/9_limparPilha.h"
+
 #endif
