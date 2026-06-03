@@ -18,7 +18,6 @@
 #include "Operacoes/7_duplicarLista.h"
 
 #include "Operacoes/6_destruirLista.h"
-#include "Operacoes/6_1_destruirListaInfo.h"
 
 #include "Operacoes/7_duplicarLista.h"
 
