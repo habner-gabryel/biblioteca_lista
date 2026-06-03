@@ -19,6 +19,7 @@ void*    desempilharInfo(pDPilha);
 int      pilhaVazia     (pDPilha);
 int      pilhasIguais   (pDPilha, pDPilha, FuncaoComparacao);
 pDPilha  copiaPilha     (pDPilha, FuncaoAlocacao);
+int      removeInfo     (pDPilha, void *, FuncaoComparacao);
 
 #endif
 
