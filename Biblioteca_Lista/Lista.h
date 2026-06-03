@@ -31,4 +31,6 @@
 
 #include "Operacoes/12_contidaListas.h"
 
+#include "Operacoes/13_inverterLista.h"
+
 #endif

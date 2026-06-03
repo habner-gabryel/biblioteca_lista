@@ -51,7 +51,7 @@ int      disjuncaoListas(pDLista, pDLista, FuncaoComparacao);
 
 int      contida (pDLista, pDLista, FuncaoComparacao);
 
-
+void    inverterLista (pDLista);
 
 
 
