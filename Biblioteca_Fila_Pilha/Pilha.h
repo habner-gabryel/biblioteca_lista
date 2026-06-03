@@ -17,4 +17,6 @@
 
 #include "OperacoesPilha/5_pilhasIguais.h"
 
+#include "OperacoesPilha/6_copiaPilha.h"
+
 #endif
