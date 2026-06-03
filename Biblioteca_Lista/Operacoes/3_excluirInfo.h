@@ -2,7 +2,15 @@
 #define EXCLUIR_INFO_H
 
 int excluirInfo(pDLista pd, void* info){
+    return efetuarExclusao(pd, info, NULL);
+}
 
+int excluirInfo1(pDLista pd, void* info, FuncaoLiberacao funcaoLiberacao){
+    return efetuarExclusao(pd, info, funcaoLiberacao);
+}
+
+int efetuarExclusao(pDLista pd, void* info, FuncaoLiberacao funcaoLiberacao){
+    
     pNoh atual = pd->inicio;
 
     while(atual != NULL){
@@ -22,6 +30,9 @@ int excluirInfo(pDLista pd, void* info){
                     pd->fim = aux;
                 }
             }
+            if(funcaoLiberacao != NULL) {
+                funcaoLiberacao(atual->info);
+            }
             free(atual);
             pd->quantidade--;
             return 1;
@@ -30,6 +41,6 @@ int excluirInfo(pDLista pd, void* info){
     }
 
     return 0;
-}
+} 
 
 #endif
