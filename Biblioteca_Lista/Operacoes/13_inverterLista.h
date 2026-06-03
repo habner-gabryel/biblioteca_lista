@@ -18,4 +18,12 @@ void inverterLista (pDLista pdLista){
 
 }
 
+pDLista inverterListaComNovaLista (pDLista pdLista, FuncaoAlocacao pfa){
+    pDLista novaLista = duplicarLista(pdLista, pfa);
+
+    inverterLista(novaLista);
+
+    return novaLista;
+}
+
 #endif
