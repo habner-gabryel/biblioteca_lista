@@ -17,4 +17,6 @@
 
 #include "OperacoesFila/5_inverterFila.h"
 
+#include "OperacoesFila/6_copiarFila.h"
+
 #endif // FILA_H

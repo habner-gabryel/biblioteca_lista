@@ -16,6 +16,7 @@ void     enfileirarInfo   (pDFila, void*);
 void*    desenfileirarInfo(pDFila);
 int      filaVazia        (pDFila);
 pDFila   inverterFila     (pDFila);
+pDFila   copiarFila       (pDFila);
 
 #endif
 
