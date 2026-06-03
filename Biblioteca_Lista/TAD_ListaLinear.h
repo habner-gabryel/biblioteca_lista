@@ -10,7 +10,7 @@ typedef Noh*        pNoh;
 typedef struct dLista  DLista;
 typedef DLista*        pDLista;
 
-// definições de ponteiros para função
+// definiï¿½ï¿½es de ponteiros para funï¿½ï¿½o
 typedef int   (*FuncaoComparacao)(void*, void*);
 typedef void  (*FuncaoImpressao) (void*);
 typedef void* (*FuncaoAlocacao)  (void*);
@@ -44,6 +44,8 @@ pDLista  duplicarLista (pDLista, FuncaoAlocacao);
 pDLista  dividirLista (pDLista, int);
 
 pDLista  unirListas   (pDLista, pDLista, FuncaoComparacao);
+
+pDLista  interseccaoListas (pDLista, pDLista, FuncaoComparacao);
 
 
 

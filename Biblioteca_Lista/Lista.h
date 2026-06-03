@@ -26,4 +26,6 @@
 
 #include "Operacoes/9_unirListas.h"
 
+#include "Operacoes/10_interseccaoListas.h"
+
 #endif
