@@ -19,4 +19,6 @@
 
 #include "OperacoesFila/6_copiarFila.h"
 
+#include "OperacoesFila/7_trocaValores.h"
+
 #endif // FILA_H
