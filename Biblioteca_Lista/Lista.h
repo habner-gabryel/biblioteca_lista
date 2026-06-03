@@ -28,4 +28,6 @@
 
 #include "Operacoes/10_interseccaoListas.h"
 
+#include "Operacoes/11_disjuncaoListas.h"
+
 #endif
