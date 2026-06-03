@@ -2,7 +2,7 @@
 #define LIMPAR_PILHA_H
 
 void limparPilha(pDPilha pilha, FuncaoLiberacao funcaoLiberacao){
-    if(pilha == NULL) {
+    if(pilhaVazia(pilha)){
         return;
     }
    
