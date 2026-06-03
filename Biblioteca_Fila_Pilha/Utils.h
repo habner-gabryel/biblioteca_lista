@@ -82,5 +82,26 @@ int palindroma (char palavra[]) {
    }
    return 1; // É palíndroma
 }
+/* ---------------------------------------- */
+int balanceamento (char expressao[], int tamanho) {
+   pDPilha pilha = criarPilha();
+   for (int i = 0; i < tamanho; i++) {
+      char c = expressao[i];
+      if (c == '(' || c == '{' || c == '[') {
+         empilharInfo(pilha, (void*)(intptr_t)c);
+      } else if (c == ')' || c == '}' || c == ']') {
+         if (pilhaVazia(pilha)) {
+            return 0; // Expressão desequilibrada
+         }
+         char topo = (char)(intptr_t)desempilharInfo(pilha);
+         if ((c == ')' && topo != '(') ||
+             (c == '}' && topo != '{') ||
+             (c == ']' && topo != '[')) {
+            return 0; // Expressão desequilibrada
+         }
+      }
+   }
+   return pilhaVazia(pilha); // Retorna 1 se equilibrada, 0 caso contrário
+}
 
 #endif /* UTILS_H */
