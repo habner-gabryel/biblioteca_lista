@@ -2,6 +2,8 @@
 #define UTILS_H
 
 #include <stdio.h>
+#include Fila.h
+#include Pilha.h
 
 /* ---------------------------------------- */
 /* tipo de dado INT */
@@ -63,6 +65,22 @@ struct Data* alocaData    (int dia, int mes, int ano){
    pd->mes = mes;
    pd->ano = ano;
    return pd;
+}
+/* ---------------------------------------- */
+int palindroma (char palavra[]) {
+   pDPilha pilha = criarPilha();
+   int len = strlen(palavra);
+   for (int i = 0; i < len / 2; i++) {
+      empilharInfo(pilha, (void*)(intptr_t)palavra[i]);
+   }
+
+   while(!pilhaVazia(pilha)) {
+      char topo = (char)(intptr_t)desempilharInfo(pilha);
+      if (topo != palavra[len - 1 - (len / 2 - 1)]) {
+         return 0; // Não é palíndroma
+      }
+   }
+   return 1; // É palíndroma
 }
 
 #endif /* UTILS_H */
